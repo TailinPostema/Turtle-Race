@@ -105,10 +105,6 @@ for turn in range(360):
     if turn == 11:
             break
 
-#THE FINAL COUNTDOWN
-            print("GO!!")
-            countdown(3)
-    
 
 
 time.sleep(2) #Pause for effect before starting the game
@@ -122,6 +118,8 @@ for i in range(145):
     turtle4.forward(randint(1,5))
     turtle5.forward(randint(1,5))
 
+#Finish Color
+
 import turtle
 wn=turtle.Screen()
 wn.bgcolor("black")
@@ -134,23 +132,6 @@ finish.right(90)
 finish.width(3)
 
 
-winner = None
-
-while not winner:
-    for turtle in turtles:
-        turtle.forward(randint(1, 5))
-        if turtle.xcor() >= 190:
-            winner = turtle
-            break  # we have a winner!
-    else: # no break
-        continue
-
-    break
-
-finish.pencolor(winner.pencolor())
-finish.write("{} won the race!".format(winner.pencolor()), font=FONT)
-
-mainloop()
 
 turtle.exitonclick()
     
